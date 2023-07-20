@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
-class  extends StatefulWidget {
-  const ({Key? key}) : super(key: key);
-
+class Screeniti extends StatefulWidget{
   @override
-  State<> createState() => _State();
+  State<Screeniti> createState() => _ScreenitiState();
 }
-
-class _State extends State<> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _ScreenitiState extends State<Screeniti> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title:Text("iti Training"),),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+        ],
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Text("ITI With Ahmed Allam"),
+            SizedBox(height: 10,),
+            Text("You are Welcome")
+          ],
+        ),
+      ),
+    );
   }
 }
