@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 
 
-class AppScreen extends StatelessWidget {
+class AppScreen extends StatefulWidget {
   const AppScreen({super.key});
 
   @override
+  State<AppScreen> createState() => _AppScreenState();
+}
+
+class _AppScreenState extends State<AppScreen> {
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Scaffold(
+      body: Container(),
+      appBar: AppBar(
+        title: const Text("Title"),
+      ),
+    );
   }
+
 }
